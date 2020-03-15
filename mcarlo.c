@@ -38,7 +38,7 @@ double random_double();
 
 /*
 * This program will use multithreading to create nultiple threads to run a
-* monte-carlo simulation in parallel. The usage is `./a.out <integer value>`
+* monte-carlo simulation in parallel. The usage is `./mcarlo <integer value>`
 */
 int main(int argc, char *argv[])
 {
@@ -48,13 +48,13 @@ int main(int argc, char *argv[])
 
     // Checks to make sure that the correct number of parameters were added
     if (argc != 2) {
-        fprintf(stderr,"usage: ./a.out <integer value>\n");
+        fprintf(stderr,"usage: ./mcarlo <integer value>\n");
         return -1;
     }
 
     // Checks to see if the input is positive
-    if (atoi(argv[1]) < 0) {
-        fprintf(stderr,"Argument %d must be non-negative\n",atoi(argv[1]));
+    if (atoi(argv[1]) < 1) {
+        fprintf(stderr,"Argument %d must be positive\n",atoi(argv[1]));
         return -1;
     }
 
