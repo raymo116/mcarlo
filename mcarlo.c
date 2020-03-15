@@ -85,6 +85,8 @@ int main(int argc, char *argv[])
     // Frees up the memory used
     free(arg1);
     free(arg2);
+
+    return 0;
 }
 
 /*
